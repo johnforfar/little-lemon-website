@@ -1,0 +1,66 @@
+.header { grid-area: header; }
+.main-menu { grid-area: main-menu; }
+.banner { grid-area: banner; }
+.main-left { grid-area: main-left; }
+.main-middle { grid-area: main-middle; }
+.main-right { grid-area: main-right; }
+.footer-left { grid-area: footer-left; }
+.footer-right { grid-area: footer-right; }
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  background-color: #f3e853;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 767px){
+    .grid-container {
+        grid-template-areas:
+          'header header header header header header'
+          'main-menu main-menu main-menu main-menu main-menu main-menu'
+          'banner banner banner banner banner banner'
+          'main-left main-left main-left main-left main-left main-left'
+          'main-middle main-middle main-middle main-middle main-middle main-middle'
+          'main-right main-right main-right main-right main-right main-right'
+          'footer-left footer-left footer-left footer-left footer-left footer-left'
+          'footer-right footer-right footer-right footer-right footer-right footer-right';
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .grid-container {
+        grid-template-areas:
+          'header header header header header header'
+          'main-menu main-menu main-menu main-menu main-menu main-menu'
+          'banner banner banner banner banner banner'
+          'main-left main-left main-middle main-middle main-right main-right'
+          'footer-left footer-left footer-left footer-right footer-right footer-right';
+    }
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 20px 0;
+  font-size: 24px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.main-menu li{
+    display: inline-block;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url("../img/paella_1920.jpg");
+    color: white;
+}
+
+.opening-hours {
+    list-style: none;
+}
